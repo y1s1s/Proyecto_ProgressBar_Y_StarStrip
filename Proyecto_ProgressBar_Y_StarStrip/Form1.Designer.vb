@@ -24,33 +24,70 @@ Partial Class Form1
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         ProgressBar1 = New ProgressBar()
-        CheckedListBox1 = New CheckedListBox()
         Timer1 = New Timer(components)
+        bt_ejemplo = New Button()
+        bt_reset = New Button()
+        Label1 = New Label()
+        bt_statusStrip = New Button()
         SuspendLayout()
         ' 
         ' ProgressBar1
         ' 
         ProgressBar1.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
-        ProgressBar1.Location = New Point(253, 242)
+        ProgressBar1.Location = New Point(12, 185)
         ProgressBar1.Name = "ProgressBar1"
-        ProgressBar1.Size = New Size(236, 23)
+        ProgressBar1.Size = New Size(776, 23)
         ProgressBar1.TabIndex = 0
         ' 
-        ' CheckedListBox1
+        ' Timer1
         ' 
-        CheckedListBox1.FormattingEnabled = True
-        CheckedListBox1.Items.AddRange(New Object() {"Eres Programador?", "Eres Alcoholico?", "Eres Drogadicto?", "Eres calvo (o te estas quedando)?"})
-        CheckedListBox1.Location = New Point(253, 115)
-        CheckedListBox1.Name = "CheckedListBox1"
-        CheckedListBox1.Size = New Size(236, 94)
-        CheckedListBox1.TabIndex = 1
+        Timer1.Interval = 1000
+        ' 
+        ' bt_ejemplo
+        ' 
+        bt_ejemplo.Location = New Point(266, 214)
+        bt_ejemplo.Name = "bt_ejemplo"
+        bt_ejemplo.Size = New Size(122, 23)
+        bt_ejemplo.TabIndex = 3
+        bt_ejemplo.Text = "Ejemplo"
+        bt_ejemplo.UseVisualStyleBackColor = True
+        ' 
+        ' bt_reset
+        ' 
+        bt_reset.Location = New Point(394, 214)
+        bt_reset.Name = "bt_reset"
+        bt_reset.Size = New Size(122, 23)
+        bt_reset.TabIndex = 4
+        bt_reset.Text = "Reiniciar"
+        bt_reset.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.Location = New Point(12, 158)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(776, 23)
+        Label1.TabIndex = 5
+        Label1.Text = "Label1"
+        Label1.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' bt_statusStrip
+        ' 
+        bt_statusStrip.Location = New Point(347, 352)
+        bt_statusStrip.Name = "bt_statusStrip"
+        bt_statusStrip.Size = New Size(75, 23)
+        bt_statusStrip.TabIndex = 6
+        bt_statusStrip.Text = "StatusStrip"
+        bt_statusStrip.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(CheckedListBox1)
+        Controls.Add(bt_statusStrip)
+        Controls.Add(Label1)
+        Controls.Add(bt_reset)
+        Controls.Add(bt_ejemplo)
         Controls.Add(ProgressBar1)
         Name = "Form1"
         Text = "Form1"
@@ -58,6 +95,9 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents CheckedListBox1 As CheckedListBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents bt_ejemplo As Button
+    Friend WithEvents bt_reset As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents bt_statusStrip As Button
 End Class
